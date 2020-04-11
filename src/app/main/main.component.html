@@ -1,0 +1,78 @@
+<nav>
+  <div>Solidarité Grombalia</div>
+  <button (click)="deconnexion()" class="btn btn-danger">
+   deconnexion
+  </button>
+</nav>
+<div class="container-fluid">
+
+<div dir="rtl" class="row">
+  <table id="excel-table-1" class="table">
+    <thead>
+      <tr>
+        <th scope="col">المتبرع</th>
+        <th scope="col">المتبرع به</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of filteredDonations">
+        <td>{{item.donator}}</td>
+        <td>{{item.donation}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <div class="row">
+    <button id="exporter" class="btn btn-primary" style="cursor: pointer" (click)="exportexcel('1')">
+      Exporter En excel
+    </button>
+  </div>
+  <div dir="rtl" class="row search_c">
+    <div class="active-pink-3 active-pink-4 mb-4">
+      <input (keyup)="filterCin($event)" class="form-control" type="text" placeholder="بحث حسب البطاقة" aria-label="Search">
+    </div>
+    <div class="active-pink-3 active-pink-4 mb-4">
+      <input (keyup)="filterPlace($event)" class="form-control" type="text" placeholder=" بحث حسب المنطقة" aria-label="Search">
+    </div>
+    <div class="active-pink-3 active-pink-4 mb-4">
+      <input (keyup)="filterName($event)" class="form-control" type="text" placeholder=" بحث حسب الإسم" aria-label="Search">
+    </div>
+  </div>
+  <div dir="ltr" class="row">
+  <table id="excel-table-2" class="table">
+    <thead>
+      <tr>
+        <th scope="col">العنوان</th>
+        <th scope="col">التاريخ</th>
+        <th scope="col"> المنطقة</th>
+        <th scope="col">ملاحظات</th>
+        <th scope="col">أرقام الهاتف</th>
+        <th scope="col">رقم البطاقة</th>
+        <th scope="col">إسم المواطن</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of filteredServices">
+        <td>{{item.adresse}}</td>
+        <td>{{item.date}}</td>
+        <td>{{item.emplacement}}</td>
+        <td>{{item.remarque}}</td>
+        <td>{{item.service}}</td>
+        <td>{{item.tel}}</td>
+        <td>{{item.user}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+<div class="row">
+
+  <button id="exporter" class="btn btn-primary" style="cursor: pointer" (click)="exportexcel('2')">
+    Exporter En excel
+  </button>
+
+</div>
+</div>

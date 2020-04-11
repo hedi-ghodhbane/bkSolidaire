@@ -1,0 +1,15 @@
+.signUpContainer{
+  width: 40%;
+  margin: 10% auto;
+}
+button {
+  margin: 2%;
+  width: 40%;
+  background-color: #000050;
+  outline-color: white;
+  border-color: white;
+}
+button:hover{
+  background-color: white;
+  color: #000050;
+}
