@@ -10,13 +10,13 @@ export class AppComponent implements OnInit {
   title = 'corona';
   constructor() {
     const config = {
-      apiKey: "AIzaSyDdSk7REQpAK-skSRAqB0-PWgq3ASWFghI",
-    authDomain: "solidaritegrombalia.firebaseapp.com",
-    databaseURL: "https://solidaritegrombalia.firebaseio.com",
-    projectId: "solidaritegrombalia",
-    storageBucket: "solidaritegrombalia.appspot.com",
-    messagingSenderId: "1051543752296",
-    appId: "1:1051543752296:web:6b71112e2d0c02edbd75dd"
+      apiKey: "AIzaSyBueuKFLm1A1kHyR8a43Xrh2P0UWA0AgY0",
+      authDomain: "bksolidaire.firebaseapp.com",
+      databaseURL: "https://bksolidaire.firebaseio.com",
+      projectId: "bksolidaire",
+      storageBucket: "bksolidaire.appspot.com",
+      messagingSenderId: "228635669391",
+      appId: "1:228635669391:web:d0a6c3d4a68518141ad1fa"
     };
     firebase.initializeApp(config);
 }
